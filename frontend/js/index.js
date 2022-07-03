@@ -65,6 +65,8 @@ const Utils = document.Utils;
 
                     if (response?.isCached)
                         App.methods.manageCache(response)
+                    else
+                        App.htmlElements.pokeInfoTitle.innerHTML = `Poke-Información`;
 
                     if (response?.types)
                         response.cardStyles = Utils.getCardStylesFromTypes(response.types);
